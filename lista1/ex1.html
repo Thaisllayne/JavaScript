@@ -1,0 +1,45 @@
+<!-- Faça um programa que entre com três números, faça a média aritmética e mostre o resultado. -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média Aritmética</title>
+</head>
+<body>
+    <div>
+       <h1>Média aritmética</h1> 
+       <label for="num1">Digite a primeira nota:</label>
+       <input type="number" id="num1">
+       <br><br>
+
+       <label for="num2">Digite a segunda nota:</label>
+       <input type="number" id="num2">
+       <br><br>
+
+       <label for="num3">Digite a terceira nota:</label>
+       <input type="number" id="num3">
+       <br><br>
+
+       <button type="submit" onclick="calcular()">Calcular</button>
+
+       <p id="res"></p>
+    </div>
+
+    <!-- JavaScript: -->
+    <script>
+        function calcular(){
+            var num1= Number(document.getElementById("num1").value);
+            var num2= Number(document.getElementById("num2").value);
+            var num3= Number(document.getElementById("num3").value);
+            var res=document.getElementById("res")
+
+            var media = (num1+num2+num3)/3
+            res.innerHTML= `A média aritmética é ${media}`
+
+
+        }
+    </script>
+</body>
+</html>
